@@ -1,7 +1,30 @@
+.page {
+    background-color: white;
+}
+
 body {
     color: #414141;
     background-color: #EEEEEE;
     font-size: 18px;
+
+}
+
+.article-1 {
+    background-color: burlywood;
+    color: black;
+    border-radius: 5px;
+}
+
+.article-2 {
+    background-color: burlywood;
+    color: black;
+    border-radius: 5px;
+}
+
+.aside {
+    background-color: grey;
+    color: black;
+    border-radius: 5px;
 }
 
 h1 {
@@ -32,3 +55,51 @@ p {
 a {
     text-decoration: none;
 }
+
+ul {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color : white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.Button{
+    color: white;
+    background-color: grey;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #5D6063;
+    border-radius: 5px;
+
+    width: 200px;
+    margin: 20 px auto;
+
+}
+
+
+
+
+
+
+
+
+
