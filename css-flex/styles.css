@@ -1,0 +1,75 @@
+/*“Floats” let you put block-level elements side-by-side instead of on top of each other. */
+
+
+* {
+
+    /* the star means I want to apply this to every element */
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    /*display: flex;
+    flex direction: column; this means that I want the display to move and I am specifyin my column for all the children. Header footer and main are children of body   */
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+header {
+    /*flex: 1 0 15vh; I want these to be flex too but within the body*/
+    flex: 1 0 15vh; /* one means I want it to grow as long as it doesn't reach 15vh. 0 mean I don't want it to shrink more than 15vh*/
+    background: rgb(184, 0, 0);
+}
+
+footer {
+    /*flex: 1 0 5vh; I want these to be flex too but within the body as it is a child of body*/
+    flex: 1 0 5vh;
+    background: rgb(0, 0, 148);
+}
+
+main {
+    flex: 1 0 80vh;
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+
+}
+
+section h2{
+    color: black;
+}
+
+section:first-child{
+    flex: 0 0 100px; /*I set it up 0 because I don't want it to change*/ 
+    background-color: hsl(60, 100%, 84%);
+
+}
+
+section:last-child{
+    flex: 1; /* set it to one because I want it to change depending on the screen size*/
+    background-color: hsl(209, 100%, 77%);
+}
+
+@media (orientation: portrait){ /* when I am in portrait mode, I want to change the direction of my main into column.*/
+    main {
+        flex-direction: column;
+    } 
+}
+
+@media (max-height: 700px) { /*You can take this a step further saying I don't want to display some things depending on the size of the screen*/
+
+    header {
+        display:none;
+    }
+    footer {
+        display: none;
+    }
+    main {
+        flex: 1 0 100vh;
+    }
+}

@@ -1,0 +1,137 @@
+
+/*Flexbox uses two types of boxes that we’ve never seen before: “flex containers” and “flex items”. */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .menu-container {
+    color: #fff;
+    background-color: #5995DA;  /* Blue */
+    padding: 20px 0;
+    display: flex; /*IMPORTANT This enables the flexbox layout mode*/
+    justify-content: center; /*After you’ve got a flex container, your next job is to define the horizontal alignment of its items.*/
+    /*you can also use flex-start, flex-end as the justify-content*/
+  }
+  
+  .menu {
+    border: 1px solid #fff;  /* For debugging */
+    width: 900px;
+    display:flex;/*distributing multiple flex items*/
+    justify-content: space-between; /*distributing multiple flex items*/
+  }
+
+  .links { /*TURN THE LINK ELEMENT INTO A FLEX*/
+    /*border: 1px solid #fff;*/  /* For debugging */
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .login{
+      margin-left: 20px;
+  }
+
+  .header-container {
+    color: #5995DA;
+    background-color: #D6E9FE;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .header { /*Since .header has an explicit height, items can be positioned vertically inside of it. The official specification calls this “cross-axis” alignmen*/
+    width: 900px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+/*.social,
+.logo,
+.subscribe {
+  border: 1px solid #5995DA;
+}*/ /*to look at the different align-items: stretch, flex-start, flex-end*/
+
+.photo-grid-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .photo-grid {
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /*Adding the following flex-wrap property forces items that don’t fit to get bumped down to the next row:*/
+    flex-direction: row; /*One of the most amazing things about flexbox is its ability to transform rows into columns using only a single line of CSS*/
+    align-items: center; /*To horizontally center our column*/
+}
+  
+  .photo-grid-item {
+    border: 1px solid #fff;
+    width: 300px;
+    height: 300px;
+  }
+
+  .first-item {
+    order: 1;
+  } /*switch our first and last item*/
+  
+  .last-item {
+    order: -1; /*switch our first and last item*/
+  }
+
+  .social,
+.subscribe {
+  align-self: flex-end; /*What if we want that Subscribe link and those social icons to go at the bottom of the header instead of the center?*/
+  margin-bottom: 20px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer-item {
+    border: 1px solid #fff;
+    background-color: #D6E9FE;
+    height: 200px;
+    flex: 1; /*That flex: 1; line tells the items to stretch to match the width of .footer.*/
+  }
+
+  /*
+  .footer-three {
+    /*flex: 2; increase the width of one of the footer*/
+  /*}*/
+
+.footer-one,
+.footer-three { /*The center item is flexible, but the ones on either side are always the same size*/
+  background-color: #5995DA;
+  flex: initial;
+  width: 300px;
+}
+
+.signup { /*Auto-margins eat up all the space in a flex container, so instead of distributing items equally, thos moves the .signup and any following to the right side*/
+    margin-left: auto;
+  }
+
+  @media (orientation: portrait){ /* when I am in portrait mode, I want to change the direction of my main into column.*/
+    .header-container {
+        flex-direction: column;
+    } 
+}
+
+@media (max-height: 700px) { /*You can take this a step further saying I don't want to display some things depending on the size of the screen*/
+
+    .header {
+        display:none;
+    }
+    .footer {
+        display: none;
+    }
+    .main {
+        flex: 1 0 100vh;
+    }
+}

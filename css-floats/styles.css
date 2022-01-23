@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .menu {
+    height: 100px;
+    background-color: #B2D6FF;    /* Medium blue */
+  }
+  
+  .sidebar {
+    width: 200px; /*The sidebar element gets narrower, but the rest of the boxes stay in the exact same position.*/
+    height: 200px; /*The sidebar element gets narrower, but the rest of the boxes stay in the exact same position.*/
+    float: left; /*because the rest of the boxes stay the same. We need to use float.*/ /*Remember that this only applies to block boxes.*/
+    background-color: #F09A9D;    /* Red */
+  }
+  
+  .content {
+    float: left; /*we don't wan it around the sidebar so we need to specify it needs to be left*/
+
+    width: 650px;                 /* Add this */
+    height: 500px;
+    background-color: #F5CF8E;
+    padding: 20px;
+
+
+  }
+  
+  .footer {
+
+    /* clearing a float is when you tell a block to ignore any floats taht appear before it.*/
+    /*clear:both; */
+    height: 200px;
+    clear: both;
+    overflow: hidden; /*Our footer background is too short. Fix it by using an overflow hidden*/
+    background-color: #D6E9FE;    /* Light blue */
+    
+  }
+
+  .page { /*giving our page a fixed-width layout*/
+    width: 900px;
+    margin: 0 auto;
+    overflow:hidden;
+    background-color: #eaedf0;
+
+    /*By adding an overflow: hidden to a container div, we are telling it to recognize the height of any floated elements it contains. This is how we can add a background color to our.page*/
+  }
+
+  .column {
+    float: left;
+    width: 31%;
+    margin: 20px 1.15%;
+    height: 160px;
+    background-color: #B2D6FF;    /* Medium blue */
+  }
+
+  .article-image {
+    float: left;
+    width: 300px;
+    height: 200px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /*p {
+    margin-bottom: 20px;
+  }
+
+  .avatar {
+    float: left;
+    width: 60px;
+    height: 60px;
+    margin: 25px;
+    border-radius: 40px;
+    background-color: #D6E9FE;
+  }
+  
+  .username {
+    margin-top: 30px;
+  }
+  
+  .comment {
+    margin: 10px;
+    overflow: hidden;   This is important it makes the writing look good inside the comment
+  }*/
