@@ -1,0 +1,158 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.menu-container {
+    /*border: 4px solid rgb(25, 218, 25);*/
+    display: flex;
+    justify-content: center;  
+    height: 100vh;
+
+}
+
+.isUnseen {
+    color: black;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: large;
+    display: block;
+  }
+
+.wallpaper {
+    background-image: url("images/Switzerland1.jpg");
+    width: 100vw;
+    height: 100vh;
+  
+    position: absolute;
+    top:0;
+    left:0;
+  
+    z-index: -100;/*it means it is behind everything*/
+  
+    background-size: cover; /*it will stretch*/
+  }
+
+.menu {
+    /*border: 4px solid rgb(25, 218, 25);*/
+    margin: 20px;
+    height:fit-content;
+}
+
+.title-container {
+    /*border: 4px solid rgb(25, 218, 25);*/
+    display: flex; 
+    height: 40vh;
+
+
+    position: absolute; /*it tells the computer you want to put it somewhere you decide and then you use bottom and right or left to decide where you want it*/
+    bottom: 0;
+    right: 50;
+}
+
+.title {
+    /*border: 4px solid rgb(25, 218, 25);*/
+    margin: 20px;
+    align-self: center;
+    font-weight: normal;
+    color: white;
+}
+
+.header-container {
+   /*border: 4px solid rgb(25, 218, 25);*/
+    display: flex; 
+    justify-content: center;
+}
+
+
+.header-title-1 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0px 250px;
+    margin-top: 75px;
+    margin-bottom: 10px;
+}
+
+.header-title-2 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: normal;
+    margin: 0px 250px;
+    margin-bottom: 75px;
+}
+
+.paragraph-1-container {
+    /*border: 4px solid rgb(25, 218, 25);*/
+    display: flex; 
+    justify-content: flex;
+}
+
+
+.paragraph-1-title {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-top: 60px;
+}
+
+.photo-grid-container {
+    margin-left: 250px;
+    margin-right: 250px;
+    --gap: 16px;
+    --num-cols: 1;
+    --row-height: 600px;
+    /*border: 4px solid rgb(25, 218, 25);*/
+    
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+    
+}
+
+.photo-grid-container > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.follow-paragraph-1-container {
+    /*border: 4px solid rgb(25, 218, 25);*/
+    display: flex; 
+    justify-content: center;
+}
+
+
+.follow-paragraph-1-title {
+    /*border: 4px solid rgb(25, 218, 25);*/
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: normal;
+    margin: 0px 250px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+a:hover {
+    border-bottom: 2px solid black;
+  }
+
+
+.footer {
+    display: flex;
+  }
+
+.footer-item {
+    display:flex;
+    color: #052135;
+    text-align: center;
+    width: 100%;
+    height: 2em; 
+    margin-top: 50px;
+    background: #89a2b1;
+    justify-content: center;
+}
+
+
+

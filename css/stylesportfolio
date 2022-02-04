@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Menu-container {
+    color: black;
+    background-color: #dddddd;
+    display: flex;
+    justify-content: start;
+}
+
+.Menu {
+  /*border: 1px solid #fff;*/  /* For debugging */
+  width: 900px;
+  display:flex;/*distributing multiple flex items*/
+  justify-content: start; /*distributing multiple flex items*/
+  overflow: hidden;
+}
+
+.Home, .Portfolio, .Reviews, .About {
+  display: block;
+  text-decoration: none;
+  border-right: 2px solid #bbb;/*Add a border next to home, portfolio, reviews and about*/
+}
+
+.About:last-child{
+  border-right:none;
+}
+
+.isUnseen {
+  color: currentColor;
+  text-decoration: none;
+  display: block;
+}
+
+.isUnseen:hover { /*Change the color when you hover over the link*/
+  background: black;
+  display: block;
+  color: white;
+}
+
+
+.isUnseen { /*change the link into block*/
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}

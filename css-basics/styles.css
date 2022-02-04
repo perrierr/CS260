@@ -10,7 +10,7 @@ body {
 }
 
 h1 {
-    border-right: #be7800 solid 1em;
+    border-right: #1f190f solid 1em;
     padding: 0.5em 1em 0.5em 0;
     background-color: hsl(202deg 30% 29%);
     color: white;
@@ -24,7 +24,7 @@ h1 {
 /*MARGIN COLLAPSE*/
 section {
     padding: 1em;
-    border-left: solid #10px #16195e; 
+    border-left: solid 10px #16195e; 
     border-radius: 10px 0 0 10px; /*makes the border round*/
     background: rgb(172,195, 216);
     margin: 1em 2em;
