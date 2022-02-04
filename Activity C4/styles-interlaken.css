@@ -146,18 +146,18 @@ li:hover {
 }
 
 .footer {
-    display: flex;
-  }
+  display: flex;
+}
 
 .footer-item {
-    display:flex;
-    color: #ccc2b4;
-    text-align: center;
-    width: 100%;
-    height: 2em; 
-    margin-top: 50px;
-    background: #491515;
-    justify-content: center;
+  display:flex;
+  color: #052135;
+  text-align: center;
+  width: 100%;
+  height: 2em; 
+  margin-top: 50px;
+  background: #89a2b1;
+  justify-content: center;
 }
 
 

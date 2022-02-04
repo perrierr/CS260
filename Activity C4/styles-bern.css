@@ -150,12 +150,12 @@ li:hover {
 
 .footer-item {
   display:flex;
-  color: #ccc2b4;
+  color: #052135;
   text-align: center;
   width: 100%;
   height: 2em; 
   margin-top: 50px;
-  background: #2c4e74;
+  background: #89a2b1;
   justify-content: center;
 }
 
