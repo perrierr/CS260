@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<title>Activity J5.6</title>
+
+<body>
+
+  <p>Current Dog Picture</p>
+  <div id="dog-picture">No picture</div>
+</body>
+
+<script>
+  const myurl = "https://dog.ceo/api/breeds/image/random";
+  console.log(myurl);
+  fetch(myurl)
+    .then(function(response) {
+      return response.json();
+    }).then(function(json) {
+      console.log(json);
+      let everything = "<p>";
+        everything += json["message"];
+        everything += "</p>" + '<img src="'+json["message"]+'"></img>"';
+        document.getElementById("dog-picture").innerHTML = everything;
+    });
+</script>
+</html>
